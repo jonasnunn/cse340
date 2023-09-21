@@ -4,3 +4,81 @@
 *:after {
   box-sizing: border-box;
 }
+
+html{
+  max-width: 1200px;
+}
+
+.siteName{
+  font-size: 2em;
+  font-weight: bold;
+}
+
+.siteName a{
+  color: black;
+  text-decoration: none;
+  margin-left: 10px;
+}
+
+#tools{
+  text-align: right;
+  margin-right: 10px;
+  margin-top: -30px;
+}
+
+#tools a{
+  color: black;
+  text-decoration: none;
+  font-size: 1.3em;
+}
+
+nav{
+  margin: 0px 10px;
+}
+
+ul {
+  background-color: black;
+  color: white;
+  display: flex;
+  list-style: none;
+  padding-left: 0px;
+}
+
+li{
+  width: 15%;
+  margin: 20px auto;
+  text-align: center;
+  font-size: 1.2em;
+}
+
+.hero{
+  color:#04bbdf;
+  background-color: rgba(248, 239, 239, 0.3);
+  width: 170px;
+  position: absolute;
+  left: 40px;
+  margin-top: 60px;
+}
+
+.hero h2{
+  margin: 0px;
+}
+
+.hero h3{
+  margin: 5px 0px;
+  font-weight: 500;
+}
+
+.hero button{
+  background-color: #04bbdf;
+  color: black;
+  font-weight: bold;
+  border: none;
+  padding: 15px 30px;
+  margin: 0 auto;
+}
+
+#delorean{
+  display: block;
+  margin-left: 0 auto;
+}
