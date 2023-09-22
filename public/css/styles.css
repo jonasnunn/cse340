@@ -5,38 +5,45 @@
   box-sizing: border-box;
 }
 
-html{
-  max-width: 1200px;
+html {
+  max-width: 1050px;
+  margin: 0 auto;
+  background-image: url('../images/site/checkerboard.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #f0f0f0; /* Fallback color */
+  z-index: 1;
 }
 
-.siteName{
+.siteName {
   font-size: 2em;
   font-weight: bold;
 }
 
-.siteName a{
+.siteName a {
   color: black;
   text-decoration: none;
   margin-left: 10px;
 }
 
-#tools{
+#tools {
   text-align: right;
   margin-right: 10px;
   margin-top: -30px;
 }
 
-#tools a{
+#tools a {
   color: black;
   text-decoration: none;
   font-size: 1.3em;
 }
 
-nav{
+nav {
   margin: 0px 10px;
 }
 
-ul {
+nav ul {
   background-color: black;
   color: white;
   display: flex;
@@ -44,32 +51,32 @@ ul {
   padding-left: 0px;
 }
 
-li{
+nav li {
   width: 15%;
   margin: 20px auto;
   text-align: center;
   font-size: 1.2em;
 }
 
-.hero{
-  color:#04bbdf;
-  background-color: rgba(248, 239, 239, 0.3);
+.hero {
+  color: #04bbdf;
+  background-color: rgba(248, 239, 239, 0.5);
   width: 170px;
   position: absolute;
   left: 40px;
   margin-top: 60px;
 }
 
-.hero h2{
+.hero h2 {
   margin: 0px;
 }
 
-.hero h3{
+.hero h3 {
   margin: 5px 0px;
   font-weight: 500;
 }
 
-.hero button{
+.hero button {
   background-color: #04bbdf;
   color: black;
   font-weight: bold;
@@ -78,7 +85,58 @@ li{
   margin: 0 auto;
 }
 
-#delorean{
+#delorean {
   display: block;
-  margin-left: 0 auto;
+  margin: 0 auto;
+}
+
+.reviews {
+  line-height: 2em;
+  font-size: 1.2em;
+}
+
+#upgrades {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  max-width: 600px;
+}
+
+.card {
+  margin: 0 auto;
+  margin-bottom: 30px;
+}
+
+.card img {
+  display: block;
+  background-color: #04bbdf;
+  padding: 20px 50px;
+  border: 1px solid black;
+  margin: 0 auto;
+}
+
+.card a {
+  color: blue;
+  text-decoration: underline;
+  display: block;
+  text-align: center;
+}
+
+#card2 img {
+  padding-bottom: 0px;
+}
+
+@media screen and (min-width: 700px) {
+  #bigDiv {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  #reviewsSection {
+    grid-column: -2/-1;
+  }
+
+  #upgradesSection {
+    grid-column: 1/2;
+    grid-row: 1/2;
+  }
 }
