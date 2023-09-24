@@ -5,15 +5,18 @@
   box-sizing: border-box;
 }
 
-html {
+body {
   max-width: 1050px;
   margin: 0 auto;
   background-image: url('../images/site/checkerboard.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-color: #f0f0f0; /* Fallback color */
-  z-index: 1;
+  background-color: #f0f0f0;
+}
+
+#wrapper{
+  background-color: #f0f0f0;
 }
 
 .siteName {
@@ -63,7 +66,7 @@ nav li {
   background-color: rgba(248, 239, 239, 0.5);
   width: 170px;
   position: absolute;
-  left: 40px;
+  left: 10%;
   margin-top: 60px;
 }
 
@@ -125,6 +128,10 @@ nav li {
   padding-bottom: 0px;
 }
 
+footer{
+  margin-left: 10px;
+}
+
 @media screen and (min-width: 700px) {
   #bigDiv {
     display: grid;
@@ -138,5 +145,16 @@ nav li {
   #upgradesSection {
     grid-column: 1/2;
     grid-row: 1/2;
+  }
+}
+
+@media screen and (min-width: 1050px) {
+  #wrapper{
+    border: 3px solid #04bbdf;
+    border-radius: 10px;
+  }
+
+  .hero{
+    left: 20%
   }
 }
