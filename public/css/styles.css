@@ -9,9 +9,9 @@ body {
   max-width: 1050px;
   margin: 0 auto;
   background-image: url('../images/site/checkerboard.jpg');
-  background-size: cover;
+  background-size: contain;
   background-position: center;
-  background-repeat: no-repeat;
+  background-repeat: repeat;
   background-color: #f0f0f0;
 }
 
