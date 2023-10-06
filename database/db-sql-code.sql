@@ -237,3 +237,10 @@ VALUES   (
     'White',
     5
   );
+
+
+
+-- Update the inventory records to modify the image and thumbnails paths
+UPDATE inventory
+SET inv_image = CONCAT('/images/vehicles/', SUBSTRING(inv_image, 9))
+   ,inv_thumbnail = CONCAT('/images/vehicles/', SUBSTRING(inv_thumbnail, 9));
