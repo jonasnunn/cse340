@@ -61,6 +61,15 @@ nav li {
   font-size: 1.2em;
 }
 
+nav a{
+  text-decoration: none;
+  color: #f0f0f0;
+}
+
+nav a:hover{
+  color: #04bbdf;
+}
+
 .hero {
   color: #04bbdf;
   background-color: rgba(248, 239, 239, 0.5);
@@ -131,6 +140,29 @@ nav li {
 footer{
   margin-left: 10px;
 }
+
+#inv-display{
+  list-style-type: none;
+}
+
+#inv-display a{
+  color: black;
+  text-decoration: none;
+}
+
+#inv-display hr{
+  display: none;
+}
+
+#inv-display h2{
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.namePrice{
+  margin-bottom: 50px;
+}
+
 
 @media screen and (min-width: 700px) {
   #bigDiv {
