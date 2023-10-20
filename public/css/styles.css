@@ -163,6 +163,20 @@ footer{
   margin-bottom: 50px;
 }
 
+#car-heading{
+  margin-left: 20px;
+}
+
+#info-list{
+  list-style: none;
+  max-width: 75%;
+}
+
+#car-img {
+  display: block;
+  max-width: 95%;
+  margin-left: 10px;
+}
 
 @media screen and (min-width: 700px) {
   #bigDiv {
@@ -177,6 +191,13 @@ footer{
   #upgradesSection {
     grid-column: 1/2;
     grid-row: 1/2;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  #car-details {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
   }
 }
 

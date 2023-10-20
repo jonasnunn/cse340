@@ -77,16 +77,27 @@ Util.buildClassificationGrid = async function (data) {
   return grid;
 };
 
-
 Util.buildCarView = async function (data) {
-  console.log("DATA:")
-  console.log(data)
+  console.log("DATA:");
+  console.log(data);
   let carView;
-  carView = '<h2 id="car-heading">';
-  carView += data[0].inv_year + " " + data[0].inv_make + " " + data[0].inv_model
-  carView += "</h2>";
-  return carView;
-}
+  carView = "<div id=car-details>"
+    carView += '<img id="car-img" src="' + data[0].inv_image + '"/>';
+    carView += '<div id="car-info">';
+      carView += '<h2 id="car-heading">';
+        carView +=
+          data[0].inv_year + " " + data[0].inv_make + " " + data[0].inv_model;
+      carView += "</h2>";
+      carView += '<ul id="info-list">'
+        carView += "<li><b>Price: </b>" + data[0].inv_price + "</li>";
+        carView += "<li><b>Description: </b>" + data[0].inv_description + "</li>";
+        carView += "<li><b>Miles: </b>" + data[0].inv_miles + "</li>";
+        carView += "<li><b>Color: </b>" + data[0].inv_color + "</li>";
+      carView += '</ul>'
+    carView += "</div>";
+  carView += "</div>"
+    return carView;
+};
 
 /* ****************************************
  * Middleware For Handling Errors
