@@ -82,7 +82,7 @@ Util.buildCarView = async function (data) {
   console.log(data);
   let carView;
   carView = "<div id=car-details>"
-    carView += '<img id="car-img" src="' + data[0].inv_image + '"/>';
+    carView += '<img id="car-img" src="' + data[0].inv_image + '" alt="Car Detail Photo"/>';
     carView += '<div id="car-info">';
       carView += '<h2 id="car-heading">';
         carView +=

@@ -143,6 +143,8 @@ footer{
 
 #inv-display{
   list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 #inv-display a{
@@ -157,6 +159,15 @@ footer{
 #inv-display h2{
   margin-top: 0px;
   margin-bottom: 0px;
+}
+
+#inv-display li{
+  max-width: 300px;
+  margin: 0px 5px;
+}
+
+#inv-display img{
+  display: block;
 }
 
 .namePrice{
