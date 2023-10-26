@@ -19,12 +19,12 @@ invCont.buildByClassificationId = async function (req, res, next) {
   })
 }
 
-invCont.buildByCarId = async function (req, res, next){ 
-  const car_Id = req.params.invId
-  const data = await invModel.getCarByInvId(car_Id)
-  const carView = await utilities.buildCarView(data)
+invCont.buildByInvId = async function (req, res, next){ 
+  const inv_id = req.params.inv_id
+  const vehicleData = await invModel.getCarByInvId(inv_id)
+  const carView = await utilities.buildCarView(vehicleData)
   let nav = await utilities.getNav()
-  const carName = data[0].inv_model
+  const carName = vehicleData[0].inv_model
   res.render("./inventory/car-details", {
     title: carName + " Details Page",
     nav,
@@ -32,5 +32,11 @@ invCont.buildByCarId = async function (req, res, next){
   })
 }
 
+invCont.triggerError = function (req, res, next) {
+  throw new error;
+  // next({
+  //   status: 500,
+  //   message: "We did it! We got a 500 error!"})
+}
 
 module.exports = invCont
