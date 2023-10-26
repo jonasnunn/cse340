@@ -34,9 +34,6 @@ invCont.buildByInvId = async function (req, res, next){
 
 invCont.triggerError = function (req, res, next) {
   throw new error;
-  // next({
-  //   status: 500,
-  //   message: "We did it! We got a 500 error!"})
 }
 
 module.exports = invCont
