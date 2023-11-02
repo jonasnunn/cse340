@@ -8,14 +8,14 @@
 body {
   max-width: 1050px;
   margin: 0 auto;
-  background-image: url('../images/site/checkerboard.jpg');
+  background-image: url("../images/site/checkerboard.jpg");
   background-size: contain;
   background-position: center;
   background-repeat: repeat;
   background-color: #f0f0f0;
 }
 
-#wrapper{
+#wrapper {
   background-color: #f0f0f0;
 }
 
@@ -61,12 +61,12 @@ nav li {
   font-size: 1.2em;
 }
 
-nav a{
+nav a {
   text-decoration: none;
   color: #f0f0f0;
 }
 
-nav a:hover{
+nav a:hover {
   color: #04bbdf;
 }
 
@@ -137,49 +137,49 @@ nav a:hover{
   padding-bottom: 0px;
 }
 
-footer{
+footer {
   margin-left: 10px;
 }
 
-#inv-display{
+#inv-display {
   list-style-type: none;
   display: flex;
   flex-wrap: wrap;
 }
 
-#inv-display a{
+#inv-display a {
   color: black;
   text-decoration: none;
 }
 
-#inv-display hr{
+#inv-display hr {
   display: none;
 }
 
-#inv-display h2{
+#inv-display h2 {
   margin-top: 0px;
   margin-bottom: 0px;
 }
 
-#inv-display li{
+#inv-display li {
   margin: 10px 5px;
-  border: 3px solid black; 
+  border: 3px solid black;
 }
 
-#inv-display img{
+#inv-display img {
   display: block;
   width: 100%;
 }
 
-.namePrice{
+.namePrice {
   margin: 5px;
 }
 
-#car-heading{
+#car-heading {
   margin-left: 20px;
 }
 
-#info-list{
+#info-list {
   list-style: none;
   max-width: 75%;
 }
@@ -190,6 +190,98 @@ footer{
   margin-left: 10px;
   /* border: 1px black solid; */
   border-radius: 8px;
+}
+
+/**********************************
+LOGIN FORM
+**********************************/
+#loginForm {
+  background-color: #32475c;
+  padding: 50px;
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+}
+
+#loginForm label {
+  font-size: 1.2em;
+  color: lightcyan;
+  font-weight: 700;
+}
+
+#emailInput,
+#passwordInput {
+  max-width: 300px;
+  padding: 8px;
+  margin-bottom: 20px;
+}
+
+#submitButton {
+  background-color: red;
+  padding: 10px 50px;
+  border-radius: 20px;
+  margin: 0 auto;
+  margin-left: 75px;
+  font-size: 1.1em;
+  color: lightcyan;
+}
+
+#loginForm a{
+  color: black;
+  background-color: #04bbdf;
+  text-decoration: none;
+  padding: 10px 50px;
+  border-radius: 20px;
+  margin: 0 auto;
+  margin-left: 75px;
+  margin-top: 20px;
+  font-size: 1.1em;
+}
+
+#loginForm span{
+  color:lightcyan;
+  font-size: .8em;
+}
+
+/**********************************
+REGISTRATION FORM
+**********************************/
+#registerForm {
+  background-color: #32475c;
+  padding: 50px;
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+}
+
+#registerForm label{
+  font-size: 1.2em;
+  color: lightcyan;
+  font-weight: 700;
+}
+
+.regInput{
+  max-width: 300px;
+  padding: 8px;
+  margin-bottom: 20px;
+}
+
+#registerButton{
+  background-color: red;
+  max-width: 200px;
+  padding: 10px 20px;
+  border-radius: 20px;
+  margin-left: 60px;
+  font-size: 1.1em;
+  font-weight: 700;
+  color: lightcyan;
+}
+
+#registerForm span{
+  color:lightcyan;
+  font-size: .8em;
 }
 
 @media screen and (min-width: 700px) {
@@ -216,16 +308,16 @@ footer{
 }
 
 @media screen and (min-width: 1050px) {
-  #wrapper{
+  #wrapper {
     border: 3px solid #04bbdf;
     border-radius: 10px;
   }
 
-  .hero{
-    left: 20%
+  .hero {
+    left: 20%;
   }
 
-  #inv-display li{
+  #inv-display li {
     width: 20%;
   }
 }
