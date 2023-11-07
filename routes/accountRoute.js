@@ -15,11 +15,10 @@ router.post('/register',
 )
 
 // Process the login attempt
-router.post(
-    "/login",
-    (req, res) => {
-      res.status(200).send('login process')
-    }
-  )
+router.post("/login", 
+  regValidate.loginRules(),
+  regValidate.checkLoginData,  (req, res) => {
+  res.status(200).send('login process')
+})
 
 module.exports = router;

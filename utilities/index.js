@@ -81,8 +81,8 @@ Util.buildClassificationGrid = async function (data) {
  * Build the car detail view HTML
  * ************************************ */
 Util.buildCarView = async function (data) {
-  console.log("DATA:");
-  console.log(data);
+  // console.log("DATA:");
+  // console.log(data);
   let carView;
   carView = "<div id=car-details>"
     carView += '<img id="car-img" src="' + data[0].inv_image + '" alt="Car Detail Photo"/>';
@@ -101,6 +101,20 @@ Util.buildCarView = async function (data) {
   carView += "</div>"
     return carView;
 };
+
+/* **************************************
+ * Build the Management view HTML
+ * ************************************ */
+Util.buildManagementView = async function () {
+  let manageView;
+  manageView = `
+  <div id="manageDiv">
+    <a href="" class="manageLinks">Add Classification</a>
+    <a href="" class="manageLinks">Add Inventory</a>
+  </div>`
+  return manageView;
+}
+
 
 /* ****************************************
  * Middleware For Handling Errors

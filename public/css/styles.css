@@ -15,6 +15,10 @@ body {
   background-color: #f0f0f0;
 }
 
+main h1{
+  margin-left: 10px;
+}
+
 #wrapper {
   background-color: #f0f0f0;
 }
@@ -283,6 +287,34 @@ REGISTRATION FORM
   color:lightcyan;
   font-size: .8em;
 }
+
+
+/**********************************
+Management Page 
+**********************************/
+#manageDiv{
+  display: flex;
+  flex-direction: column;
+}
+
+.manageLinks{
+  font-size: 1.4em;
+  text-decoration: none;
+  color: #04bbdf;
+  margin-bottom: 15px;
+  margin-left: 50px;
+}
+
+
+
+
+
+
+
+
+
+
+
 
 @media screen and (min-width: 700px) {
   #bigDiv {

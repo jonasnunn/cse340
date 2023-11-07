@@ -19,6 +19,9 @@ invCont.buildByClassificationId = async function (req, res, next) {
   })
 }
 
+/* ***************************
+ *  Build a view of a car with the inventory id
+ * ************************** */
 invCont.buildByInvId = async function (req, res, next){ 
   const inv_id = req.params.inv_id
   const vehicleData = await invModel.getCarByInvId(inv_id)
@@ -29,6 +32,19 @@ invCont.buildByInvId = async function (req, res, next){
     title: carName + " Details Page",
     nav,
     carView
+  })
+}
+
+/* ***************************
+ *  Build the management view
+ * ************************** */
+invCont.buildManagementView = async function (req, res, next){ 
+  const manageView = await utilities.buildManagementView()
+  let nav = await utilities.getNav()
+  res.render("./inventory/management", {
+    title: "Inventory Management",
+    nav,
+    manageView
   })
 }
 
