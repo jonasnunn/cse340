@@ -48,6 +48,33 @@ invCont.buildManagementView = async function (req, res, next){
   })
 }
 
+/* ***************************
+ *  Build the view to add a new classification
+ * ************************** */
+invCont.buildAddClass = async function (req, res, next){ 
+  // const addClassView = await utilities.()
+  let nav = await utilities.getNav()
+  res.render("./inventory/add-classification", {
+    title: "Add Classification",
+    nav,
+    // addClassViewView
+  })
+}
+
+
+/* ***************************
+ *  Build the view to add a new car
+ * ************************** */
+invCont.buildAddInv = async function (req, res, next){ 
+  // const addClassView = await utilities.()
+  let nav = await utilities.getNav()
+  res.render("./inventory/add-inventory", {
+    title: "Add Inventory",
+    nav,
+    // addClassViewView
+  })
+}
+
 invCont.triggerError = function (req, res, next) {
   throw new error;
 }

@@ -1,0 +1,47 @@
+<% if (title) { %>
+    <h1><%= title %></h1>
+    <% } else {
+        res.redirect('/') 
+    } %> 
+  
+  <%- messages() %>
+  
+  <form id="addInvForm" action="/" method="post">
+
+    <label for="classification_id">Classification:</label>
+    <input id="classification_id" type="text" name="classification_id" required>
+
+    <label for="inv_make">Make:</label>
+    <input id="inv_make" type="text" name="inv_make" required>
+  
+    <label for="inv_model">Model:</label>
+    <input id="inv_model" type="text" name="inv_model" required>
+
+    <label for="inv_year">Year:</label>
+    <input id="inv_year" type="text" name="inv_year" required>
+
+    <label for="inv_description">Description:</label>
+    <input id="inv_description" type="text" name="inv_description" required>
+
+    <label for="inv_image">Images Path:</label>
+    <input id="inv_image" type="text" name="inv_image" required>
+
+    <label for="inv_thumbnail">Thumbnail Path:</label>
+    <input id="inv_thumbnail" type="text" name="inv_thumbnail" required>
+
+    <label for="inv_price">Price:</label>
+    <input id="inv_price" type="text" name="inv_price" required>
+
+    <label for="inv_miles">Miles:</label>
+    <input id="inv_miles" type="text" name="inv_miles" required>
+
+    <label for="inv_color">Color:</label>
+    <input id="inv_color" type="text" name="inv_color" required>
+
+    <label for="inv_miles">Miles:</label>
+    <input id="inv_miles" type="text" name="inv_miles" required>
+
+
+    <input id="classSubmitButton"  type="submit" value="Add Classification">
+    <a href="/"></a>
+  </form>

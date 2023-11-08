@@ -1,0 +1,17 @@
+<% if (title) { %>
+  <h1><%= title %></h1>
+  <% } else {
+      res.redirect('/') 
+  } %> 
+
+<%- messages() %>
+
+<%#- addClassView %>
+
+<form id="addClassForm" action="/" method="post">
+  <label for="classification">Classification:</label>
+  <input id="classificationInput" type="text" name="classification" required>
+
+  <input id="classSubmitButton"  type="submit" value="Add Classification">
+  <a href="/"></a>
+</form>
