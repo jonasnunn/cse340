@@ -9,7 +9,7 @@ router.get("/register", utilities.handleErrors(accountsController.buildRegister)
 
 // ADD NEW ACCOUNT
 router.post('/register',
-  regValidate.registationRules(),
+  regValidate.registrationRules(),
   regValidate.checkRegData,
   utilities.handleErrors(accountsController.registerAccount)
 )

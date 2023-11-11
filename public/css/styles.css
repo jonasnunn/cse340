@@ -323,7 +323,7 @@ Add New Classification Page
   font-size: 1.2em;
 }
 
-#classificationInput{
+#classification_name{
   width: 350px;
   margin-bottom: 20px;
   padding: 5px;
@@ -340,9 +340,47 @@ Add New Classification Page
 /**********************************
 Add New Car Page 
 **********************************/
+#addInvForm{
+  background-color: #32475c;
+  color:lightcyan;
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+  margin: 50px auto;
+  padding: 30px;
+}
 
+#addInvForm label{
+  font-size: 1.2em;
+}
 
+#addInvForm input{
 
+  margin-bottom: 25px;
+  padding: 5px;
+}
+
+#addInvForm #inv_description{
+  height: 80px;
+  padding: 5px;
+}
+
+#addInvForm #invSubmit{
+  background-color: red;
+  color: lightcyan;
+  margin: 0 auto;
+  padding: 15px 60px;
+  font-size: 1.3em; 
+}
+
+#addInvForm select{
+  padding: 8px;
+  margin-bottom: 15px;
+}
+
+#addInvForm textarea{
+  margin-bottom: 15px;
+}
 
 
 

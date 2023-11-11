@@ -55,12 +55,12 @@ invCont.buildAddClass = async function (req, res, next){
   // const addClassView = await utilities.()
   let nav = await utilities.getNav()
   res.render("./inventory/add-classification", {
+    errors: null,
     title: "Add Classification",
     nav,
     // addClassViewView
   })
 }
-
 
 /* ***************************
  *  Build the view to add a new car
@@ -68,11 +68,86 @@ invCont.buildAddClass = async function (req, res, next){
 invCont.buildAddInv = async function (req, res, next){ 
   // const addClassView = await utilities.()
   let nav = await utilities.getNav()
+  const classification_list = await utilities.buildClassificationList()
   res.render("./inventory/add-inventory", {
+    errors: null,
     title: "Add Inventory",
     nav,
+    classification_list
     // addClassViewView
   })
+}
+
+/* ****************************************
+*  Process adding a new classification
+* *************************************** */
+invCont.addClass = async function (req, res) {
+  let nav = await utilities.getNav()
+  const {classification_name} = req.body
+  const addClassification = await invModel.addClass(classification_name)
+
+  if (addClassification) {
+    nav = await utilities.getNav()
+    req.flash(
+      "notice",
+      `Congratulations, you\'ve added ${classification_name}.`
+    )
+    const manageView = await utilities.buildManagementView()
+    res.status(201).render("inventory/management", {
+      title: "Management ",
+      nav,
+      manageView,
+      errors: null,
+    })
+  } else {
+    req.flash("notice", "Sorry, adding the car failed.")
+    res.status(501).render("inventory/add-classification", {
+      title: "Add Classification",
+      nav,
+      errors: null,
+    })
+  }
+}
+
+/* ****************************************
+*  Process adding a new car
+* *************************************** */
+invCont.addInv = async function (req, res) {
+  let nav = await utilities.getNav()
+  const manageView = await utilities.buildManagementView()
+  const {classification_id, inv_make, inv_model, inv_year, inv_description, inv_image, inv_thumbnail, inv_price, inv_miles, inv_color} = req.body
+
+  const addInv = await invModel.addInv(
+    classification_id,
+    inv_make, 
+    inv_model, 
+    inv_year,
+    inv_description, 
+    inv_image, 
+    inv_thumbnail,
+    inv_price, 
+    inv_miles,
+    inv_color
+  )
+
+  if (addInv) {
+    req.flash(
+      "notice",
+      `Congratulations, you\'ve added ${inv_model}.`
+    )
+    res.status(201).render("inventory/management", {
+      title: "Management",
+      nav,
+      manageView
+    })
+  } else {
+    req.flash("notice", "Sorry, the registration failed.")
+    res.status(501).render("inventory/add-inventory", {
+      title: "Add Inventory",
+      nav,
+      errors: null,
+    })
+  }
 }
 
 invCont.triggerError = function (req, res, next) {

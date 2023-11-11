@@ -103,18 +103,33 @@ Util.buildCarView = async function (data) {
 };
 
 /* **************************************
- * Build the Management view HTML
+ * Build the management view HTML
  * ************************************ */
 Util.buildManagementView = async function () {
   let manageView;
   manageView = `
   <div id="manageDiv">
-    <a href="./addclass" class="manageLinks">Add Classification</a>
-    <a href="./addinv" class="manageLinks">Add Inventory</a>
+    <a href="./inv/addclass" class="manageLinks">Add Classification</a>
+    <a href="./inv/addinv" class="manageLinks">Add Inventory</a>
   </div>`
   return manageView;
 }
 
+Util.buildClassificationList = async function(classification_id = null) {
+  let data = await invModel.getClassifications()
+  let classification_list = '<select name="classification_id" id="classification_id">'
+  classification_list += "<option>Chose a Classification</option>"
+  data.rows.forEach((row) => {
+    classification_list += '<option value="' + row.classification_id + '"'
+    if (classification_id != null && row.classification_id == classification_id)
+    {
+      classification_list += " selected "
+    }
+    classification_list += ">" + row.classification_name + "</option>"
+  })
+  classification_list += "</select>"
+  return classification_list
+}
 
 /* ****************************************
  * Middleware For Handling Errors
