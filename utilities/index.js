@@ -109,8 +109,8 @@ Util.buildManagementView = async function () {
   let manageView;
   manageView = `
   <div id="manageDiv">
-    <a href="./inv/addclass" class="manageLinks">Add Classification</a>
-    <a href="./inv/addinv" class="manageLinks">Add Inventory</a>
+    <a href="/inv/addclass" class="manageLinks">Add Classification</a>
+    <a href="/inv/addinv" class="manageLinks">Add Inventory</a>
   </div>`
   return manageView;
 }
