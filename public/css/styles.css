@@ -214,8 +214,8 @@ LOGIN FORM
   font-weight: 700;
 }
 
-#emailInput,
-#passwordInput {
+#account_email,
+#account_password {
   max-width: 300px;
   padding: 8px;
   margin-bottom: 20px;
