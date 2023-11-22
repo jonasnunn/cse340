@@ -20,6 +20,12 @@ router.get("/", utilities.handleErrors(invController.buildManagementView));
 router.get("/addclass", utilities.handleErrors(invController.buildAddClass));
 // Add Inventory view
 router.get("/addinv", utilities.handleErrors(invController.buildAddInv));
+// Get the view to manage vehicles
+router.get("/getInventory/:classification_id", utilities.handleErrors(invController.getInventoryJSON))
+// Edit a vehicle 
+router.get("/edit/:inv_id", utilities.handleErrors(invController.editInventoryView))
+// Delete a vehicle view
+router.get("/delete/:inv_id", utilities.handleErrors(invController.deleteCarView))
 
 /*************************************
 POST ROUTES 
@@ -28,7 +34,10 @@ POST ROUTES
 router.post("/addclass", invValidation.addClassRules(), invValidation.checkClassData, utilities.handleErrors(invController.addClass));
 // Add a new car 
 router.post("/addinv", invValidation.addInvRules(), invValidation.checkInvData, utilities.handleErrors(invController.addInv));
-
+// Edit a car
+router.post("/update", invValidation.addInvRules(), invValidation.checkUpdateData, utilities.handleErrors(invController.updateInventory))
+// Delete a car
+router.post("/delete", utilities.handleErrors(invController.deleteInventory))
 
 
 module.exports = router;

@@ -119,7 +119,7 @@ Util.buildManagementView = async function () {
 
 Util.buildClassificationList = async function(classification_id = null) {
   let data = await invModel.getClassifications()
-  let classification_list = '<select name="classification_id" id="classification_id">'
+  let classification_list = '<select name="classification_id" id="classificationList">'
   classification_list += "<option>Chose a Classification</option>"
   data.rows.forEach((row) => {
     classification_list += '<option value="' + row.classification_id + '"'
@@ -162,6 +162,19 @@ Util.checkJWTToken = (req, res, next) => {
     })
   } else {
    next()
+  }
+}
+
+
+/* ****************************************
+ *  Check Login
+ * ************************************ */
+Util.checkLogin = (req, res, next) => {
+  if (res.locals.loggedin) {
+    next()
+  } else {
+    req.flash("notice", "Please log in.")
+    return res.redirect("/account/login")
   }
 }
 

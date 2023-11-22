@@ -111,7 +111,6 @@ async function accountLogin(req, res) {
 * *************************************** */
 async function buildAccountManagement(req, res) {
   let nav = await utilities.getNav()
-  console.log("buildAccountManagement")
   res.render("account/management", {
     title: "Account Management",
     nav,

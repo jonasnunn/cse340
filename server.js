@@ -106,3 +106,22 @@ app.listen(port, () => {
 // Test password
 // email : test@email.com
 // Password123!
+
+
+// Test accounts
+// account_firstname: Basic
+// account_lastname: Client
+// account_email: basic@340.edu
+// account_password: I@mABas1cCl!3nt
+// account_firstname: Happy
+// account_lastname: Employee
+// account_email: happy@340.edu
+// account_password: I@mAnEmpl0y33
+// account_firstname: Manager
+// account_lastname: User
+// account_email: manager@340.edu
+// account_password: I@mAnAdm!n1strat0r
+
+
+// jwt value
+// eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50X2lkIjoyMiwiYWNjb3VudF9maXJzdG5hbWUiOiJCYXNpYyIsImFjY291bnRfbGFzdG5hbWUiOiJDbGllbnQiLCJhY2NvdW50X2VtYWlsIjoiYmFzaWNAMzQwLmVkdSIsImFjY291bnRfdHlwZSI6IkNsaWVudCIsImlhdCI6MTcwMDIwMTUzMywiZXhwIjoxNzAzODAxNTMzfQ.Dj3kdokvYKqSaXXBYcboa_gODrRFehl4p1MNKmcc6nQ

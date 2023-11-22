@@ -305,6 +305,30 @@ Management Page
   margin-left: 50px;
 }
 
+#managementHeading{
+  margin-left: 10px;
+}
+
+
+#classificationList{
+  padding: 8px;
+  margin-left: 10px;
+}
+
+#inventoryDisplay{
+  margin-left: 10px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+#inventoryDisplay a{
+  color: #04bbdf;
+  text-decoration: none;
+}
+
+#inventoryDisplay tbody tr td{
+  padding-right: 40px;
+}
 
 /**********************************
 Add New Classification Page 
@@ -381,8 +405,6 @@ Add New Car Page
 #addInvForm textarea{
   margin-bottom: 15px;
 }
-
-
 
 
 @media screen and (min-width: 700px) {
