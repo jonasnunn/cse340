@@ -9,9 +9,11 @@ require("dotenv").config()
 * *************************************** */
 async function buildLogin(req, res, next) {
     let nav = await utilities.getNav()
+    const accountHeader = utilities.accountHeader(res);
     res.render("account/login", {
       title: "Login",
       nav,
+      accountHeader,
       errors: null,
     })
 }
@@ -21,9 +23,11 @@ async function buildLogin(req, res, next) {
 * *************************************** */
 async function buildRegister(req, res, next) {
   let nav = await utilities.getNav()
+  const accountHeader = utilities.accountHeader(res);
   res.render("account/register", {
     title: "Register",
     nav,
+    accountHeader,
     errors: null,
   })
 }
@@ -33,6 +37,7 @@ async function buildRegister(req, res, next) {
 * *************************************** */
 async function registerAccount(req, res) {
   let nav = await utilities.getNav()
+  const accountHeader = utilities.accountHeader(res);
   const { account_firstname, account_lastname, account_email, account_password } = req.body
   
   // Hash the password before storing
@@ -45,6 +50,7 @@ async function registerAccount(req, res) {
     res.status(500).render("account/register", {
       title: "Registration",
       nav,
+      accountHeader,
       errors: null,
     })
   }
@@ -81,6 +87,7 @@ async function registerAccount(req, res) {
  * ************************************ */
 async function accountLogin(req, res) {
   let nav = await utilities.getNav()
+  const accountHeader = utilities.accountHeader(res);
   const { account_email, account_password } = req.body
   const accountData = await accountModel.getAccountByEmail(account_email)
   if (!accountData) {
@@ -88,6 +95,7 @@ async function accountLogin(req, res) {
    res.status(400).render("account/login", {
     title: "Login",
     nav,
+    accountHeader,
     errors: null,
     account_email,
    })
@@ -111,9 +119,11 @@ async function accountLogin(req, res) {
 * *************************************** */
 async function buildAccountManagement(req, res) {
   let nav = await utilities.getNav()
+  const accountHeader = utilities.accountHeader(res);
   res.render("account/management", {
     title: "Account Management",
     nav,
+    accountHeader,
     errors: null,
   })
 }

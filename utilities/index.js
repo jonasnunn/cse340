@@ -178,6 +178,31 @@ Util.checkLogin = (req, res, next) => {
   }
 }
 
+/* ****************************************
+ *  Check Account Type
+ * ************************************ */
+Util.checkAccountType = (req, res, next) => {
+  if (res.locals.loggedin &&  (res.locals.accountData.account_type == 'Admin' || res.locals.accountData.account_type == 'Employee' )){
+    next()
+  } else {
+    req.flash("notice", "Please log in to an account with sufficient permissions.")
+    return res.redirect("/account/login")
+  }
+}
+
+
+/* ****************************************
+ *  Returns HTML for the header 
+ * ************************************ */
+Util.accountHeader = function (res) {
+  const loggedIn = res.locals.loggedin
+  if (loggedIn){
+    return `
+    <a title="Click to Manage Inventory" href="/inv">Welcome Basic</a>
+    <a title="Click to logout" href="/account/logout">Logout</a>`
+  }
+  else{ return  `<a title="Click to log in" href="/account/login">My Account</a>` }
+}
 
 
 module.exports = Util;

@@ -17,9 +17,9 @@ router.get("/trigger-error", utilities.handleErrors(invController.triggerError))
 // Inventory Management view
 router.get("/", utilities.handleErrors(invController.buildManagementView));
 // Add  class view
-router.get("/addclass", utilities.handleErrors(invController.buildAddClass));
+router.get("/addclass", utilities.checkAccountType, utilities.handleErrors(invController.buildAddClass));
 // Add Inventory view
-router.get("/addinv", utilities.handleErrors(invController.buildAddInv));
+router.get("/addinv", utilities.checkAccountType, utilities.handleErrors(invController.buildAddInv));
 // Get the view to manage vehicles
 router.get("/getInventory/:classification_id", utilities.handleErrors(invController.getInventoryJSON))
 // Edit a vehicle 
