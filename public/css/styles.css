@@ -407,6 +407,55 @@ Add New Car Page
 }
 
 
+/**********************************
+ Edit account info page
+**********************************/
+#editAccountForm{
+  background-color: #32475c;
+  color:lightcyan;
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+  margin: 50px auto;
+  padding: 30px;
+}
+
+#editAccountForm label{
+  font-size: 1.2em;
+}
+
+#editAccountForm input{
+
+  margin-bottom: 25px;
+  padding: 5px;
+}
+
+#editAccountForm #accountSubmit{
+  background-color: red;
+  color: lightcyan;
+  margin: 0 auto;
+  padding: 15px 60px;
+  font-size: 1.3em; 
+}
+
+#updatePasswordForm{
+  background-color: #32475c;
+  color:lightcyan;
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+  margin: 50px auto;
+  padding: 30px;
+}
+
+#passwordSubmit{
+  background-color: red;
+  color: lightcyan;
+  margin: 0 auto;
+  padding: 15px 60px;
+  font-size: 1.3em; 
+}
+
 @media screen and (min-width: 700px) {
   #bigDiv {
     display: grid;

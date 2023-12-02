@@ -198,11 +198,15 @@ Util.accountHeader = function (res) {
   const loggedIn = res.locals.loggedin
   if (loggedIn){
     return `
-    <a title="Click to Manage Inventory" href="/inv">Welcome Basic</a>
+    <a title="Click to Manage Inventory" href="/account">Welcome Basic</a>
     <a title="Click to logout" href="/account/logout">Logout</a>`
   }
   else{ return  `<a title="Click to log in" href="/account/login">My Account</a>` }
 }
+
+/* ****************************************
+ *  Delete the Token and Logout the user 
+ * ************************************ */
 
 
 module.exports = Util;
