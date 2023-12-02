@@ -207,6 +207,11 @@ Util.accountHeader = function (res) {
 /* ****************************************
  *  Delete the Token and Logout the user 
  * ************************************ */
-
+// Add a new function to delete the "jwt" cookie
+Util.logout = function (res) {
+  res.clearCookie("jwt");
+  // Redirect the user to the home page after logging out
+  res.redirect("/");
+}
 
 module.exports = Util;

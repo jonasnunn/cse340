@@ -10,6 +10,8 @@ router.get("/login", utilities.handleErrors(accountsController.buildLogin))
 router.get("/register", utilities.handleErrors(accountsController.buildRegister))
 router.get("/edit/:account_id", utilities.handleErrors(accountsController.editAccountView))
 router.get("/change-password/:account_id", utilities.handleErrors(accountsController.editAccountView))
+// Process the logout attempt
+router.get("/logout", utilities.handleErrors(accountsController.logout));
 
 // Add new account
 router.post('/register', regValidate.registrationRules(), regValidate.checkRegData, utilities.handleErrors(accountsController.registerAccount))

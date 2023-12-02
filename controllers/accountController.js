@@ -262,4 +262,11 @@ async function processPasswordUpdate(req, res, next) {
 }
 
 
-module.exports = { buildLogin, buildRegister, registerAccount, accountLogin, buildAccountManagement, editAccountView, processAccountUpdate, processPasswordUpdate}
+/* ****************************************
+*  Handle Logging out
+* *************************************** */
+async function logout(req, res, next) {
+  utilities.logout(res)
+}
+
+module.exports = { buildLogin, buildRegister, registerAccount, accountLogin, buildAccountManagement, editAccountView, processAccountUpdate, processPasswordUpdate, logout}
